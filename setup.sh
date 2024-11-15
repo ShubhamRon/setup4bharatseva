@@ -1,5 +1,8 @@
 #!/bin/bash
 set -e
+echo "Installing Server and openssh"
+apt-get update && apt-get install -y openssh-client curl
+
 
 echo "$SSH_KEY" > /tmp/ssh_key
 chmod 600 /tmp/ssh_key
